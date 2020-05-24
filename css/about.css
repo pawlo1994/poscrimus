@@ -1,0 +1,44 @@
+.about {
+    margin: 20px auto;
+    width: 75%;
+    padding: 0 10vw;
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:991px) {
+    .about {
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+.about__section {
+    margin-left: 20px;
+}
+
+@media(max-width:991px) {
+    .about__section {
+        margin: 0;
+    }
+}
+
+.about__header {
+    text-transform: uppercase;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px #aaa;
+    color: #000;
+}
+
+.about__paragraph {
+    text-align: justify;
+    font-size: 18px;
+    color: #666;
+}
+
+.about__image {
+    display: flex;
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
+}

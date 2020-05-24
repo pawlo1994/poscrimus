@@ -37,7 +37,6 @@
 }
 
 .about__image {
-    display: flex;
     width: 30%;
     height: 30%;
     border-radius: 10%;

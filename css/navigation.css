@@ -81,12 +81,6 @@
     transition: 0.3s;
 }
 
-@media(max-width: 1023px) {
-    .navigation-menu__link {
-        font-size: 24px;
-    }
-}
-
 .navigation-menu__link-social {
     display: flex;
     align-items: center;
@@ -95,18 +89,6 @@
 
 .navigation-menu__social-icon {
     width: 20px;
-}
-
-@media(max-width: 1023px) {
-    .navigation-menu__social-icon {
-        width: 28px;
-    }
-}
-
-@media(max-width: 767px) {
-    .navigation-menu__social-icon {
-        width: 24px;
-    }
 }
 
 .navigation__logo:hover, .navigation-menu__link:hover {

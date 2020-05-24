@@ -1,11 +1,9 @@
 .about {
-    position: relative;
     margin: 20px auto;
     width: 75%;
     padding: 0 10vw;
     display: flex;
     align-items: center;
-    z-index: -1;
 }
 
 @media(max-width:991px) {
@@ -39,6 +37,7 @@
 }
 
 .about__image {
+    display: block;
     width: 30%;
     height: 30%;
     border-radius: 10%;

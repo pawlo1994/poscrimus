@@ -39,7 +39,9 @@
 }
 
 .about__image {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30%;
     height: 30%;
     border-radius: 10%;

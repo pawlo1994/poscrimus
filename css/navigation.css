@@ -83,12 +83,6 @@
 
 @media(max-width: 1023px) {
     .navigation-menu__link {
-        font-size: 28px;
-    }
-}
-
-@media(max-width: 767px) {
-    .navigation-menu__link {
         font-size: 24px;
     }
 }

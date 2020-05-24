@@ -54,9 +54,9 @@
 }
 
 .navigation__logo:hover, .navigation-menu__link:hover {
-    text-shadow: 2px 2px 0px #000;
+    text-shadow: 2px 3px 0px #000;
 }
 
 .navigation-menu__link-social:hover {
-    box-shadow: 2px 2px 0px #000;
+    box-shadow: 2px 3px 0px #000;
 }

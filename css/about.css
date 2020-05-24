@@ -15,11 +15,13 @@
 
 .about__section {
     margin-left: 20px;
+    width: 70%;
 }
 
 @media(max-width:991px) {
     .about__section {
         margin: 0;
+        width: 100%;
     }
 }
 

@@ -1,0 +1,68 @@
+.bookmark {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #ddd, #999);
+    padding: 10px 20px;
+    font-size: 32px;
+    width: 80%;
+    margin: 20px auto;
+    z-index: -2;
+    border-radius: 10px;
+}
+
+@media(max-width: 1023px) {
+    .bookmark {
+        font-size: 16px;
+    }
+}
+
+.bookmark__description {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.bookmark__header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #fff;
+    margin: 0;
+}
+
+.bookmark--songs::after {
+    position: absolute;
+    right: 100px;
+    content: "🎶";
+    display: block;
+    text-shadow: 2px 2px 2px #666;
+    opacity: 0.5;
+}
+
+@media(max-width: 767px) {
+    .bookmark--songs::after {
+        display: block;
+        right: 10px;
+    }
+}
+
+.bookmark--contact::before {
+    position: absolute;
+    left: 100px;
+    content: "✍";
+    display: block;
+    text-shadow: 2px 2px 2px #666;
+    opacity: 0.5;
+}
+
+@media(max-width: 767px) {
+    .bookmark--contact::before {
+        display: block;
+        left: 10px;
+    }
+}

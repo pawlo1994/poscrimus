@@ -35,13 +35,16 @@
     margin: 0;
 }
 
-.bookmark--songs::after {
+.bookmark::after {
     position: absolute;
-    right: 100px;
-    content: "🎶";
     display: block;
     text-shadow: 2px 2px 2px #666;
     opacity: 0.5;
+}
+
+.bookmark--songs::after {
+    right: 100px;
+    content: "🎶";
 }
 
 @media(max-width: 767px) {
@@ -51,18 +54,14 @@
     }
 }
 
-.bookmark--contact::before {
-    position: absolute;
-    left: 100px;
+.bookmark--contact::after {
+    right: 100px;
     content: "✍";
-    display: block;
-    text-shadow: 2px 2px 2px #666;
-    opacity: 0.5;
 }
 
 @media(max-width: 767px) {
-    .bookmark--contact::before {
+    .bookmark--contact::after {
         display: block;
-        left: 10px;
+        right: 10px;
     }
 }

@@ -81,6 +81,12 @@
     transition: 0.3s;
 }
 
+.navigation-menu__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navigation-menu__link-social {
     display: flex;
     align-items: center;

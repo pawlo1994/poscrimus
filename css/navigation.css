@@ -95,6 +95,7 @@
 
 .navigation-menu__social-icon {
     width: 20px;
+    display: block;
 }
 
 .navigation__logo:hover, .navigation-menu__link:hover {

@@ -2,11 +2,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    background-image: linear-gradient(to right, #ddd, #999);
+    background-image: linear-gradient(to bottom, #ddd, #999);
     padding: 10px 20px;
-    font-size: 32px;
+    font-size: 48px;
     width: 80%;
     margin: 20px auto;
     z-index: -2;
@@ -15,23 +15,24 @@
 
 @media(max-width: 1023px) {
     .bookmark {
-        font-size: 16px;
+        font-size: 24px;
     }
 }
 
 .bookmark__description {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     color: #333;
-    margin: 0;
+    margin: 0 10px;
 }
 
 .bookmark__header {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
     color: #000;
     text-transform: uppercase;
     text-shadow: 2px 2px 0px #fff;
+    text-align: left;
     margin: 0;
 }
 
@@ -40,28 +41,15 @@
     display: block;
     text-shadow: 2px 2px 2px #666;
     opacity: 0.5;
+    transform: rotate(30deg);
 }
 
 .bookmark--songs::after {
-    right: 100px;
+    right: 30px;
     content: "🎶";
 }
 
-@media(max-width: 767px) {
-    .bookmark--songs::after {
-        display: block;
-        right: 10px;
-    }
-}
-
 .bookmark--contact::after {
-    right: 100px;
+    right: 30px;
     content: "✍";
-}
-
-@media(max-width: 767px) {
-    .bookmark--contact::after {
-        display: block;
-        right: 10px;
-    }
 }

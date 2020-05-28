@@ -120,7 +120,7 @@
 
 @media(max-width: 1023px) {
     .navigation-menu__mobile-button {
-        /*please work*/
+        /*outline deleted*/
         display: block;
         border: 0;
         background-image: url("../images/navigation.svg");

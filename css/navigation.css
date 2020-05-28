@@ -122,12 +122,21 @@
     .navigation-menu__mobile-button {
         display: block;
         border: 0;
-        background: 0;
+        background-image: url("../images/navigation.svg");
+        background-color: transparent;
+        background-position: center center;
+        background-size: cover;
         padding: 0;
         z-index: 1;
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
     }
 }
 
-.navigation-menu__mobile-button-icon {
-    width: 40px;
+@media(max-width: 1023px) {
+    .navigation-menu__mobile-button--open {
+        background-image: url("../images/cross.webp");
+        transform: rotate(360deg);
+    }
 }

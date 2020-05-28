@@ -20,20 +20,22 @@
     <nav class="navigation">
         <div class="navigation__inner">
             <a href="#" class="navigation__logo">PoScriMus</a>
-            <ul class="navigation-menu js-navigation-menu">
-                <li class="navigation-menu__item">
-                    <a href="#" class="navigation-menu__link">home</a>
-                </li>
-                <li class="navigation-menu__item">
-                    <a href="#about" class="navigation-menu__link">o mnie</a>
-                </li>
-                <li class="navigation-menu__item">
-                    <a href="#songs" class="navigation-menu__link">utwory</a>
-                </li>
-                <li class="navigation-menu__item">
-                    <a href="#contact" class="navigation-menu__link">kontakt</a>
-                </li>
-                <div class="navigation-menu__social">
+            <div class="navigation-menu js-navigation-menu">
+                <ul class="navigation-menu__pages">
+                    <li class="navigation-menu__item">
+                        <a href="#" class="navigation-menu__link">home</a>
+                    </li>
+                    <li class="navigation-menu__item">
+                        <a href="#about" class="navigation-menu__link">o mnie</a>
+                    </li>
+                    <li class="navigation-menu__item">
+                        <a href="#songs" class="navigation-menu__link">utwory</a>
+                    </li>
+                    <li class="navigation-menu__item">
+                        <a href="#contact" class="navigation-menu__link">kontakt</a>
+                    </li>
+                </ul>
+                <ul class="navigation-menu__social">
                     <li class="navigation-menu__item">
                         <a href="https://facebook.com/poscrimus" target="_blank" class="navigation-menu__link-social">
                             <img src="images/facebook.svg" alt="facebook" class="navigation-menu__social-icon">
@@ -50,17 +52,17 @@
                             <img src="images/youtube.svg" alt="youtube" class="navigation-menu__social-icon">
                         </a>
                     </li>
-                </div>
-            </ul>
+                </ul>
+            </div>
             <button class="navigation-menu__mobile-button js-navigation-menu__mobile-button">
                 <img src="images/navigation.svg" alt="menu" class="navigation-menu__mobile-button-icon">
             </button>
         </div>
     </nav>
     <script src="js/main-navigation.js"></script>
-    <section class="container">
+    <div class="container">
         <a href="#about" class="container__link">dowiedz się więcej</a>
-    </section>
+    </div>
     <div class="about" id="about">
         <img src="images/author.jpg" alt="autor" class="about__image">
         <section class="about__section">

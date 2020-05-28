@@ -38,6 +38,7 @@
 
 .bookmark::after {
     position: absolute;
+    right: 20px;
     display: block;
     text-shadow: 2px 2px 2px #666;
     opacity: 0.5;
@@ -45,11 +46,9 @@
 }
 
 .bookmark--songs::after {
-    right: 30px;
     content: "🎶";
 }
 
 .bookmark--contact::after {
-    right: 30px;
     content: "✍";
 }

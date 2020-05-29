@@ -3,9 +3,21 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background_1080.jpg");
     background-size: cover;
     background-position: center center;
+}
+
+@media(max-width:1023px) {
+    .container {
+        background-image: url("../images/background_576.jpg");
+    }
+}
+
+@media(max-width:767px) {
+    .container {
+        background-image: url("../images/background_450.jpg");
+    }
 }
 
 .container__link {

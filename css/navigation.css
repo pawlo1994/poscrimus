@@ -137,7 +137,7 @@
 
 @media(max-width: 1023px) {
     .navigation-menu__mobile-button--open {
-        background-image: url("../images/cross.webp");
+        background-image: url("../images/cross.svg");
         transform: rotate(360deg);
     }
 }

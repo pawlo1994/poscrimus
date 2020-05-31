@@ -93,6 +93,13 @@
     border: none;
 }
 
+@media(max-width: 767px) {
+    .song__video {
+        width: 80vw;
+        height: 45vw;
+    }
+}
+
 .song-1--open, .song-2--open, .song-3--open {
     opacity: 1;
     transform: unset;

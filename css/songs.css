@@ -88,15 +88,15 @@
 }
 
 .song__video {
-    width: 64vw;
-    height: 36vw;
+    width: 600px;
+    height: 450px;
     border: none;
 }
 
 @media(max-width: 767px) {
     .song__video {
-        width: 80vw;
-        height: 45vw;
+        width: 300px;
+        height: 275px;
     }
 }
 

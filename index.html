@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/bookmark.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/songs.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous">
@@ -127,6 +128,38 @@
                 <img src="images/contact.svg" alt="kontakt" class="bookmark__icon-image">
             </div>
         </div>
+        <section class="contact">
+            <h2 class="contact__header">Masz jakieś pytania?</h2>
+            <p class="contact__description">Z chęcią na nie odpowiem. Zadzwoń, napisz do mnie maila lub na messengerze.
+                Możesz także zostawić wiadomość w formularzu poniżej.
+            </p>
+            <div class="contact__items">
+                <div class="contact__item">
+                    <a href="tel:511405939" class="contact__item-link">
+                        <img src="images/phone.svg" alt="telefon" class="contact__item-icon">
+                        511 405 939
+                    </a>
+                </div>
+                <div class="contact__item">
+                    <a href="mailto:poscrimus@gmail.com" class="contact__item-link">
+                        <img src="images/envelope.svg" alt="email" class="contact__item-icon">
+                        poscrimus@gmail.com
+                    </a>
+                </div>
+                <div class="contact__item">
+                    <a href="https://m.me/poscrimus" class="contact__item-link">
+                        <img src="images/messenger.svg" alt="messenger" class="contact__item-icon">
+                        m.me/poscrimus
+                    </a>
+                </div>
+            </div>
+            <form class="contact__form">
+                <input name="nick" class="contact__form-field" placeholder="nick" required>
+                <input name="mail" type="email" class="contact__form-field" placeholder="e-mail" required>
+                <textarea class="contact__form-textarea" placeholder="treść wiadomości" rows="10" required></textarea>
+                <button class="contact__form-button">wyślij</button>
+            </form>
+        </section>
     </main>
     <footer class="footer">Copyright &copy; Paweł Suchy (PoScriMus) 2020</footer>
 </body>

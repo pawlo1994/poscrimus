@@ -1,0 +1,25 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../images/background_1080.jpg");
+    background-size: cover;
+}
+
+.banner__link {
+    text-transform: uppercase;
+    font-size: 26px;
+    border: 1px #fff solid;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.banner__link:hover {
+    background-color: #000;
+    box-shadow: 0px 0px 10px #aaa;
+}

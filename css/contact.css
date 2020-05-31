@@ -24,6 +24,7 @@
     flex-basis: calc(50% - 5px);
     margin: 5px auto;
     padding: 10px;
+    border: 1px solid #666;
 }
 
 @media(max-width: 1023px) {
@@ -40,6 +41,7 @@
     flex-basis: calc(100% - 5px);
     margin: 5px auto;
     padding: 10px;
+    border: 1px solid #666;
 }
 
 .contact__form-button {

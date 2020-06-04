@@ -10,6 +10,12 @@
     border-radius: 10px 10px 0 0;
 }
 
+.bookmark__target {
+    margin: 0;
+    height: 60px;
+    background: #fff;
+}
+
 .bookmark__inner {
     display: flex;
     align-items: flex-start;

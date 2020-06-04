@@ -1,3 +1,6 @@
+/*commentary
+Author: pawlo1994
+*/
 .songs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

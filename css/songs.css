@@ -108,6 +108,7 @@
 }
 
 .song__video {
+    display: none;
     width: 50vw;
     height: 50vh;
     border: none;

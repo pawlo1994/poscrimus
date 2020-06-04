@@ -77,7 +77,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(30, 30, 30, 0.5);
+    background: rgb(30, 30, 30);
     position: fixed;
     top: 5%;
     right: 5%;
@@ -138,6 +138,12 @@
 
 .close__button-image {
     width: 3vw;
+}
+
+@media(max-width: 767px) and (orientation:portrait) {
+    .close__button-image {
+        width: 5vw;
+    }
 }
 
 @keyframes show {

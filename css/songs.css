@@ -142,6 +142,7 @@
 
 @media(max-width: 767px) and (orientation:portrait) {
     .close__button-image {
+        /*another image width*/
         width: 5vw;
     }
 }

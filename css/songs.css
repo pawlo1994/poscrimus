@@ -79,10 +79,10 @@
     flex-direction: column;
     background: rgb(30, 30, 30);
     position: fixed;
-    top: 5%;
-    right: 5%;
-    left: 5%;
-    bottom: 5%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     animation-name: show;
     animation-duration: 0.5s;
     animation-timing-function: ease;

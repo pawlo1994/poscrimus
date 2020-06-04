@@ -26,5 +26,5 @@ songButton3.addEventListener("click", () => {
 
 closeButton.addEventListener("click", () => {
     song.style.display = "none";
-    songVideo.src = "source";
+    songVideo.src = "images/songs.svg";
 })

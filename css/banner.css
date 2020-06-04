@@ -5,7 +5,13 @@
     height: 100vh;
     background-image: url("../images/background.jpg");
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
+}
+
+@media(orientation: portrait) {
+    .banner {
+        background-size: cover;
+    }
 }
 
 .banner__link {

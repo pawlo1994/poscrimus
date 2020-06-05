@@ -114,6 +114,7 @@ Author: pawlo1994
     width: 50vw;
     height: 50vh;
     border: none;
+    object-fit: cover;
 }
 
 @media(orientation: portrait) {

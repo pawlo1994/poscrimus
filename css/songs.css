@@ -1,6 +1,7 @@
 /*commentary
 Author: pawlo1994
 */
+
 .songs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -114,7 +115,6 @@ Author: pawlo1994
     width: 50vw;
     height: 50vh;
     border: none;
-    object-fit: cover;
 }
 
 @media(orientation: portrait) {

@@ -11,6 +11,7 @@ Author: pawlo1994
     gap: 20px;
     grid-gap: 20px;
     background-color: #eee;
+    border-radius: 0 0 10px 10px;
 }
 
 @media(max-width: 1023px) and (orientation: landscape) {

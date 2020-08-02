@@ -93,6 +93,13 @@ Author: pawlo1994
     animation-timing-function: ease;
 }
 
+@media (orientation: portrait) {
+    .song {
+        justify-content: flex-start;
+        padding-top: 50px;
+    }
+}
+
 .song__header {
     font-size: 3vw;
     text-align: center;

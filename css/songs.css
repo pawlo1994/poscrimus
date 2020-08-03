@@ -39,6 +39,9 @@ Author: pawlo1994
     background: none;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 10px;
+    transition-property: box-shadow;
+    padding: 10px 0;
 }
 
 @media(max-width: 1023px) and (orientation: landscape) {

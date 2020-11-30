@@ -7,3 +7,12 @@ body {
     font-family: "Roboto condensed", sans-serif;
     font-size: 16px;
 }
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #999;
+}

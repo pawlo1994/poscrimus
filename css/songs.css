@@ -119,6 +119,12 @@ Author: pawlo1994
     animation-timing-function: ease;
 }
 
+@media (orientation: landscape) {
+    .song__mini {
+        justify-content: flex-end;
+    }
+}
+
 @media(orientation:landscape) {
     .song__mini {
         width: 50vw;
@@ -165,6 +171,13 @@ Author: pawlo1994
     .song .song__video {
         height: 25%;
         margin-top: 200px;
+    }
+}
+
+@media(orientation: landscape) {
+    .song__mini .song__video {
+        height: 80%;
+        width: 80%;
     }
 }
 

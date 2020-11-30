@@ -30,9 +30,8 @@
         align-items: flex-start;
         object-fit: contain;
         position: fixed;
-        padding: 10px 60px 10px 20px;
+        padding: 5px 60px 5px 10px;
         border-bottom-left-radius: 10px;
-        box-shadow: 0 0 2px 2px #ddd;
         top: 0;
         right: 0;
         opacity: 0;
@@ -102,12 +101,6 @@
     color: #fff;
     transition: 0.3s;
     transition-property: text-shadow;
-}
-
-@media(max-width: 1023px) {
-    .navigation-menu__link {
-        font-size: 16px;
-    }
 }
 
 .navigation-menu__pages, .navigation-menu__social {

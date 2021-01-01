@@ -9,19 +9,19 @@ const songHeader = document.querySelector(".song__header");
 const songVideo = document.querySelector(".song__video");
 
 songButton1.addEventListener("click", () => {
-    song.style.display = "flex";
+    song.classList.add("song--open");
     songHeader.textContent = "PoScriMus - In the C of Calmness";
     songVideo.src = "https://www.youtube.com/embed/LrAqEPDiUzA";
 });
 
 songButton2.addEventListener("click", () => {
-    song.style.display = "flex";
+    song.classList.add("song--open");
     songHeader.textContent = "PoScriMus - Hip-Hop";
     songVideo.src = "https://www.youtube.com/embed/sQL3kvhqtLM";
 });
 
 songButton3.addEventListener("click", () => {
-    song.style.display = "flex";
+    song.classList.add("song--open");
     songHeader.textContent = "PoScriMus - Sweet Reggae";
     songVideo.src = "https://www.youtube.com/embed/inE9P9wqzzI";
 });
@@ -32,7 +32,7 @@ closeButton.addEventListener("click", () => {
         song.classList.add("song");
         resizeButton.innerHTML = "&darr;"
     };
-    song.style.display = "none";
+    song.classList.remove("song--open");
     songVideo.src = "images/youtube.svg";
 });
 resizeButton.addEventListener("click", () => {

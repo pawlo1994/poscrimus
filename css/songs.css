@@ -97,6 +97,10 @@ Author: pawlo1994
     animation-timing-function: ease;
 }
 
+.song--open {
+    display: flex;
+}
+
 @media (orientation: portrait) {
     .song {
         justify-content: flex-start;
@@ -104,7 +108,6 @@ Author: pawlo1994
 }
 
 .song__mini {
-    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;

@@ -34,17 +34,12 @@
         border-bottom-left-radius: 10px;
         top: 0;
         right: 0;
+        z-index: 3;
+        transition: 0.5s;
+        transition-property: transform, opacity;
         opacity: 0;
         pointer-events: none;
         transform: translateX(50%);
-        transition: 0.5s;
-        transition-property: transform, opacity;
-    }
-}
-
-@media(max-width: 1023px) and (orientation:landscape) {
-    .navigation-menu {
-        height: 100px;
     }
 }
 
@@ -155,6 +150,7 @@
         height: 30px;
         transition: 0.5s;
         outline: none;
+        z-index: 3;
     }
 }
 

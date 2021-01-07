@@ -95,6 +95,7 @@ Author: pawlo1994
     animation-name: show;
     animation-duration: 0.5s;
     animation-timing-function: ease;
+    z-index: 4;
 }
 
 .song--open {
@@ -127,12 +128,8 @@ Author: pawlo1994
     .song__mini {
         justify-content: flex-end;
         border-radius: 10px 0 0 0;
-    }
-}
-
-@media(orientation:landscape) {
-    .song__mini {
         width: 50vw;
+        z-index: 2;
     }
 }
 

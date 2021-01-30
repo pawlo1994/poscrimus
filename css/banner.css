@@ -24,6 +24,7 @@
     text-decoration: none;
     color: #fff;
     transition: 0.3s;
+    transition-property: box-shadow, background-color;
 }
 
 .banner__link:hover {

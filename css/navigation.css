@@ -149,6 +149,7 @@
         width: 30px;
         height: 30px;
         transition: 0.5s;
+        transition-property: transform;
         outline: none;
         z-index: 3;
     }

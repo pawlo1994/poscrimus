@@ -149,7 +149,7 @@
         width: 30px;
         height: 30px;
         transition: 0.5s;
-        transition-property: transform;
+        transition-property: transform, background-image;
         outline: none;
         z-index: 3;
     }

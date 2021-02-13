@@ -81,10 +81,11 @@ Author: pawlo1994
 
 .song {
     display: none;
+    color: #fff;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgb(30, 30, 30);
+    background-color: rgb(30, 30, 30);
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -109,10 +110,12 @@ Author: pawlo1994
 }
 
 .song__mini {
+    color: #000;
+    text-shadow: 1px 1px 0px #fff;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgb(30, 30, 30);
+    background-color: #aaa;
     position: fixed;
     height: 50vh;
     width: 100vw;
@@ -141,7 +144,6 @@ Author: pawlo1994
     width: 70%;
     font-size: 3vw;
     text-align: left;
-    color: #fff;
 }
 
 @media(orientation:landscape) {
@@ -183,17 +185,17 @@ Author: pawlo1994
     }
 }
 
-.resize__button {
+.resize__button, .close__button {
     margin: 0;
     padding: 0;
     background: none;
+    color: #fff;
     border: none;
     cursor: pointer;
     transition: 0.3s;
     transition-property: opacity;
     opacity: 0.5;
     font-size: 3vw;
-    color: #fff;
 }
 
 @media(max-width: 1023px) {
@@ -206,19 +208,6 @@ Author: pawlo1994
     .resize__button {
         font-size: 6vw;
     }
-}
-
-.close__button {
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    transition-property: opacity;
-    opacity: 0.5;
-    font-size: 3vw;
-    color: #fff;
 }
 
 @media(max-width: 1023px) {
@@ -255,6 +244,10 @@ Author: pawlo1994
     right: 0;
     top: 0;
     width: 20vw;
+}
+
+.song__mini .close__button, .song__mini .resize__button {
+    color: #000;
 }
 
 @media (orientation: landscape) {

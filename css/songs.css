@@ -80,7 +80,6 @@ Author: pawlo1994
 }
 
 .song {
-    display: none;
     color: #fff;
     align-items: center;
     justify-content: center;
@@ -93,14 +92,18 @@ Author: pawlo1994
     right: 0;
     left: 0;
     bottom: 0;
-    animation-name: show;
-    animation-duration: 0.5s;
-    animation-timing-function: ease;
-    z-index: 4;
+    transition: 0.5s;
+    transition-property: transform, opacity;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
 }
 
 .song--open {
     display: flex;
+    transform: scale(1);
+    opacity: unset;
+    pointer-events: unset;
 }
 
 @media (orientation: portrait) {
@@ -121,10 +124,19 @@ Author: pawlo1994
     width: 100vw;
     right: 0;
     bottom: 0;
-    animation-name: show;
-    animation-duration: 0.5s;
-    animation-timing-function: ease;
     border-radius: 10px 10px 0 0;
+    transition: 0.5s;
+    transition-property: transform, opacity;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+}
+
+.song__mini--open {
+    display: flex;
+    opacity: 1;
+    pointer-events: unset;
+    transform: unset;
 }
 
 @media (orientation: landscape) {
@@ -144,6 +156,7 @@ Author: pawlo1994
     width: 70%;
     font-size: 3vw;
     text-align: left;
+    opacity: 0;
 }
 
 @media(orientation:landscape) {
@@ -163,6 +176,11 @@ Author: pawlo1994
     width: 50%;
     height: 50%;
     border: none;
+    opacity: 0;
+}
+
+.song--open .song__video, .song--open .song__header, .song__mini--open .song__video, .song__mini--open .song__header {
+    opacity: 1;
 }
 
 @media(orientation: portrait) {
@@ -224,13 +242,6 @@ Author: pawlo1994
 
 .close__button:hover, .resize__button:hover {
     opacity: 1;
-}
-
-@keyframes show {
-    from {
-        transform: scale(0.5);
-        opacity: 0.5;
-    }
 }
 
 .song__video__buttons {

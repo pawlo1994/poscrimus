@@ -19,6 +19,7 @@
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous">
     <script defer src="js/main-navigation.js"></script>
     <script defer src="js/song.js"></script>
+    <script defer src="js/navigation-loader.js"></script>
 </head>
 
 <body>
@@ -66,18 +67,23 @@
             <button class="navigation-menu__mobile-button js-navigation-menu__mobile-button">
             </button>
         </div>
-        <section class="song">
-            <h2 class="song__header">author - title</h2>
+        <div class="song">
+            <section class="song__header">
+                <h2 class="song__header__description">author - title</h2>
+                <div class="song__header__buttons">
+                    <button class="resize__button">
+                        &darr;
+                    </button>
+                    <button class="close__button">
+                        &#10539;
+                    </button>
+                </div>
+            </section>
             <iframe src="images/youtube.svg" class="song__video" allowfullscreen></iframe>
-            <div class="song__video__buttons">
-                <button class="resize__button">
-                    &darr;
-                </button>
-                <button class="close__button">
-                    &#10539;
-                </button>
-            </div>
-        </section>
+        </div>
+        <div class="navigation__loader">
+            <img src="images/songs.svg" class="navigation__loader-image" alt="czekaj...">
+        </div>
     </nav>
     <main>
         <div class="banner">

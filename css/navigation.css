@@ -51,6 +51,34 @@
     }
 }
 
+.navigation__loader {
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #aaa;
+    opacity: 1;
+    z-index: 5;
+}
+
+.navigation__loader-image {
+    display: block;
+    width: 200px;
+    height: 200px;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+}
+
 .navigation__logo {
     font-size: 50px;
     font-weight: bold;
@@ -159,5 +187,14 @@
     .navigation-menu__mobile-button--open {
         background-image: url("../images/cross.svg");
         transform: rotate(360deg);
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
     }
 }

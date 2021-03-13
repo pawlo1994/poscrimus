@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/bookmark.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/songs.css">
+    <link rel="stylesheet" href="css/song-list.css">
+    <link rel="stylesheet" href="css/song-box.css">
     <link rel="stylesheet" href="css/contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous">
     <script defer src="js/main-navigation.js"></script>
     <script defer src="js/song.js"></script>
-    <script defer src="js/navigation-loader.js"></script>
 </head>
 
 <body>
@@ -67,10 +67,10 @@
             <button class="navigation-menu__mobile-button js-navigation-menu__mobile-button">
             </button>
         </div>
-        <div class="song">
-            <section class="song__header">
-                <h2 class="song__header__description">author - title</h2>
-                <div class="song__header__buttons">
+        <div class="song-box">
+            <section class="song-box__header">
+                <h2 class="song-box__header__description">author - title</h2>
+                <div class="song-box__header__buttons">
                     <button class="resize__button">
                         &darr;
                     </button>
@@ -79,10 +79,7 @@
                     </button>
                 </div>
             </section>
-            <iframe src="images/youtube.svg" class="song__video" allowfullscreen></iframe>
-        </div>
-        <div class="navigation__loader">
-            <img src="images/songs.svg" class="navigation__loader-image" alt="czekaj...">
+            <iframe src="images/youtube.svg" class="song-box__video" allowfullscreen></iframe>
         </div>
     </nav>
     <main>
@@ -117,18 +114,18 @@
                 <img src="images/songs.svg" alt="utwory" class="bookmark__icon-image">
             </div>
         </div>
-        <div class="songs">
-            <button class="song__button js-song__button-1">
+        <div class="song-list">
+            <button class="song-list__button js-song__button-1">
                 PoScriMus - In the C of Calmness
-                <img src="images/Logo_new.jpg" alt="" class="song__image">
+                <img src="images/Logo_new.jpg" alt="" class="song-list__button-image">
             </button>
-            <button class="song__button js-song__button-2">
+            <button class="song-list__button js-song__button-2">
                 PoScriMus - Hip-Hop
-                <img src="images/Logo_new.jpg" alt="" class="song__image">
+                <img src="images/Logo_new.jpg" alt="" class="song-list__button-image">
             </button>
-            <button class="song__button js-song__button-3">
+            <button class="song-list__button js-song__button-3">
                 PoScriMus - Sweet Reggae
-                <img src="images/Logo_new.jpg" alt="" class="song__image">
+                <img src="images/Logo_new.jpg" alt="" class="song-list__button-image">
             </button>
         </div>
         <div class="bookmark__target" id="contact"></div>

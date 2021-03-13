@@ -44,13 +44,12 @@
     flex-direction: column;
     background-color: #aaa;
     position: fixed;
-    height: 30vh;
+    height: 40vh;
     width: 100vw;
     right: 0;
     bottom: 0;
     border-radius: 10px 10px 0 0;
     transition: 0.5s;
-    transition-property: transform, opacity;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.5);
@@ -95,7 +94,7 @@
 
 @media(max-width: 1023px) {
     .song-box__header {
-        font-size: 12px;
+        font-size: 18px;
     }
 }
 
@@ -178,10 +177,9 @@
     object-fit: contain;
     color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 30%;
 }
 
 .resize__button, .close__button {
@@ -192,6 +190,13 @@
     transition: 0.3s;
     transition-property: opacity;
     opacity: 0.5;
+    font-size: 36px;
+}
+
+@media(max-width: 1023px) {
+    .resize__button, .close__button {
+        font-size: 24px;
+    }
 }
 
 .close__button:hover, .resize__button:hover {

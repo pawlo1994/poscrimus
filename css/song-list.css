@@ -1,0 +1,80 @@
+/*commentary
+Author: pawlo1994
+*/
+
+.song-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0 auto 40px;
+    padding: 20px 0;
+    gap: 20px;
+    grid-gap: 20px;
+    background-color: #eee;
+    border-radius: 0 0 10px 10px;
+}
+
+@media(max-width: 1023px) and (orientation: landscape) {
+    .song-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 1023px) and (orientation: portrait) {
+    .song-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.song-list__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2vw;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+    transition-property: box-shadow;
+    padding: 10px 0;
+}
+
+@media(max-width: 1023px) and (orientation: landscape) {
+    .song-list__button {
+        font-size: 3vw;
+    }
+}
+
+@media(max-width: 1023px) and (orientation: portrait) {
+    .song-list__button {
+        font-size: 4vw;
+    }
+}
+
+.song-list__button:hover {
+    box-shadow: 0 0 5px #000;
+}
+
+.song-list__button-image {
+    width: 16vw;
+    height: 9vw;
+}
+
+@media(max-width: 1023px) and (orientation: landscape) {
+    .song-list__button-image {
+        width: 24vw;
+        height: 14vw;
+    }
+}
+
+@media(max-width: 1023px) and (orientation: portrait) {
+    .song-list__button-image {
+        width: 64vw;
+        height: 36vw;
+    }
+}

@@ -1,72 +1,72 @@
-const songButton1 = document.querySelector(".js-song__button-1");
-const songButton2 = document.querySelector(".js-song__button-2");
-const songButton3 = document.querySelector(".js-song__button-3");
+const songBoxButton1 = document.querySelector(".js-song__button-1");
+const songBoxButton2 = document.querySelector(".js-song__button-2");
+const songBoxButton3 = document.querySelector(".js-song__button-3");
 const closeButton = document.querySelector(".close__button");
 const resizeButton = document.querySelector(".resize__button");
-const song = document.querySelector(".song");
-const songHeaderDescription = document.querySelector(".song__header__description");
-const songVideo = document.querySelector(".song__video");
+const songBox = document.querySelector(".song-box");
+const songBoxHeaderDescription = document.querySelector(".song-box__header__description");
+const songBoxVideo = document.querySelector(".song-box__video");
 
-songButton1.addEventListener("click", () => {
-    if (song.classList.contains("song__mini")) {
-        song.classList.add("song__mini--open");
+songBoxButton1.addEventListener("click", () => {
+    if (songBox.classList.contains("song-box-mini")) {
+        songBox.classList.add("song-box-mini--open");
         resizeButton.innerHTML = "&uarr;"
     }
     else {
-        song.classList.add("song--open");
+        songBox.classList.add("song-box--open");
         resizeButton.innerHTML = "&darr;"
     }
-    songHeaderDescription.textContent = "PoScriMus - In the C of Calmness";
-    songVideo.src = "https://www.youtube.com/embed/LrAqEPDiUzA";
+    songBoxHeaderDescription.textContent = "PoScriMus - In the C of Calmness";
+    songBoxVideo.src = "https://www.youtube.com/embed/LrAqEPDiUzA";
 });
 
-songButton2.addEventListener("click", () => {
-    if (song.classList.contains("song__mini")) {
-        song.classList.add("song__mini--open");
+songBoxButton2.addEventListener("click", () => {
+    if (songBox.classList.contains("song-box-mini")) {
+        songBox.classList.add("song-box-mini--open");
         resizeButton.innerHTML = "&uarr;"
     }
     else {
-        song.classList.add("song--open");
+        songBox.classList.add("song-box--open");
         resizeButton.innerHTML = "&darr;"
     }
-    songHeaderDescription.textContent = "PoScriMus - Hip-Hop";
-    songVideo.src = "https://www.youtube.com/embed/sQL3kvhqtLM";
+    songBoxHeaderDescription.textContent = "PoScriMus - Hip-Hop";
+    songBoxVideo.src = "https://www.youtube.com/embed/sQL3kvhqtLM";
 });
 
-songButton3.addEventListener("click", () => {
-    if (song.classList.contains("song__mini")) {
-        song.classList.add("song__mini--open");
+songBoxButton3.addEventListener("click", () => {
+    if (songBox.classList.contains("song-box-mini")) {
+        songBox.classList.add("song-box-mini--open");
         resizeButton.innerHTML = "&uarr;"
     }
     else {
-        song.classList.add("song--open");
+        songBox.classList.add("song-box--open");
         resizeButton.innerHTML = "&darr;"
     }
-    songHeaderDescription.textContent = "PoScriMus - Sweet Reggae";
-    songVideo.src = "https://www.youtube.com/embed/inE9P9wqzzI";
+    songBoxHeaderDescription.textContent = "PoScriMus - Sweet Reggae";
+    songBoxVideo.src = "https://www.youtube.com/embed/inE9P9wqzzI";
 });
 
 closeButton.addEventListener("click", () => {
-    if (song.classList.contains("song")) {
-        song.classList.remove("song--open");
+    if (songBox.classList.contains("song-box")) {
+        songBox.classList.remove("song-box--open");
     }
     else {
-        song.classList.remove("song__mini--open");
+        songBox.classList.remove("song-box-mini--open");
     }
-    songVideo.src = "images/youtube.svg";
+    songBoxVideo.src = "images/youtube.svg";
 });
 resizeButton.addEventListener("click", () => {
-    if (song.classList.contains("song")) {
-        song.classList.remove("song");
-        song.classList.remove("song--open");
-        song.classList.add("song__mini");
-        song.classList.add("song__mini--open");
+    if (songBox.classList.contains("song-box")) {
+        songBox.classList.remove("song-box");
+        songBox.classList.remove("song-box--open");
+        songBox.classList.add("song-box-mini");
+        songBox.classList.add("song-box-mini--open");
         resizeButton.innerHTML = "&uarr;";
     } else {
-        song.classList.remove("song__mini");
-        song.classList.remove("song__mini--open");
-        song.classList.add("song");
-        song.classList.add("song--open");
+        songBox.classList.remove("song-box-mini");
+        songBox.classList.remove("song-box-mini--open");
+        songBox.classList.add("song-box");
+        songBox.classList.add("song-box--open");
         resizeButton.innerHTML = "&darr;";
     }
 });

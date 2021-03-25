@@ -12,19 +12,21 @@
     right: 0;
     left: 0;
     bottom: 0;
-    transition: 0.5s;
-    transition-property: transform, opacity;
     opacity: 0;
     pointer-events: none;
+    transition-property: opacity, transform;
+    transition: 0.5s 0.5s;
     transform: scale(0.5);
+    transform-origin: top left;
     z-index: 4;
 }
 
 .song-box--open {
     display: flex;
-    transform: scale(1);
+    transform: unset;
     opacity: unset;
     pointer-events: unset;
+    transition: none;
 }
 
 @media (orientation: portrait) {
@@ -49,10 +51,12 @@
     right: 0;
     bottom: 0;
     border-radius: 10px 10px 0 0;
-    transition: 0.5s;
     opacity: 0;
     pointer-events: none;
+    transition-property: opacity, transform;
+    transition: 0.5s 0.5s;
     transform: scale(0.5);
+    transform-origin: bottom right;
 }
 
 @media(orientation:landscape) {
@@ -66,6 +70,7 @@
     opacity: 1;
     pointer-events: unset;
     transform: unset;
+    transition: none;
 }
 
 @media (orientation: landscape) {
@@ -114,7 +119,6 @@
 
 .song-box-mini .song-box__header-description {
     color: #000;
-    text-shadow: 1px 1px 1px #fff;
 }
 
 @media(max-width: 1023px) and (orientation:landscape) {

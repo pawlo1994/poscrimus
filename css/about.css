@@ -1,8 +1,12 @@
 .about {
     margin: 20px auto;
-    width: 70%;
+    padding: 10px;
+    width: 80%;
+    max-width: 1024px;
     display: flex;
     align-items: center;
+    background-color: #eee;
+    border-radius: 10px;
 }
 
 @media(max-width:1023px) and (orientation: portrait) {
@@ -33,6 +37,7 @@
 
 .about__header {
     text-transform: uppercase;
+    text-align: center;
     font-size: 30px;
     text-shadow: 1px 1px 1px #aaa;
     color: #000;
@@ -44,10 +49,16 @@
     }
 }
 
+@media(max-width:767px) {
+    .about__header {
+        font-size: 24px;
+    }
+}
+
 .about__paragraph {
     text-align: justify;
     font-size: 18px;
-    color: #666;
+    color: #333;
 }
 
 @media(max-width: 1023px) and (orientation: landscape) {

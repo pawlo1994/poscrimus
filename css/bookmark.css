@@ -5,6 +5,7 @@
     background-image: linear-gradient(to bottom, #ddd, #999);
     padding: 10px 20px;
     width: 80%;
+    max-width: 1024px;
     margin: 20px auto 0;
     z-index: -2;
     border-radius: 10px 10px 0 0;
@@ -13,7 +14,7 @@
 .bookmark__target {
     margin: 0;
     height: 60px;
-    background: #fff;
+    background: transparent;
 }
 
 .bookmark__inner {

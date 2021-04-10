@@ -73,6 +73,7 @@
     justify-content: center;
     width: 30%;
     height: 30%;
+    max-width: 280px;
     border-radius: 10%;
 }
 

@@ -1,14 +1,15 @@
 .bookmark {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    background-image: linear-gradient(to bottom, #ddd, #999);
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(160, 159, 159));
     padding: 10px 20px;
     width: 80%;
     max-width: 1024px;
     margin: 20px auto 0;
     z-index: -2;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
 }
 
 .bookmark__target {
@@ -33,9 +34,8 @@
 .bookmark__header {
     font-size: 36px;
     font-weight: bold;
-    color: #000;
+    color: #333;
     text-transform: uppercase;
-    text-shadow: 2px 2px 0px #fff;
     text-align: left;
     margin: 0;
 }

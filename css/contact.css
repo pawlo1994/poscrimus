@@ -23,8 +23,8 @@
 
 .contact__item-list {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
 }
 
 @media(max-width: 1023px) {
@@ -37,7 +37,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px 20px;
 }
 
 .contact__item-icon {
@@ -52,7 +51,8 @@
     color: #333;
     text-decoration: none;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
+    margin: 10px;
     box-shadow: 0 0 2px #999;
     transition: 0.5s;
     transition-property: box-shadow;

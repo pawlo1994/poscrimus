@@ -137,8 +137,11 @@
         height: 30px;
         transition: 0.5s;
         transition-property: transform, background-image;
-        outline: none;
         z-index: 3;
+    }
+    .navigation-menu__mobile-button:focus {
+        outline: 2px solid #666;
+        outline-offset: 2px;
     }
 }
 

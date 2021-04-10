@@ -1,14 +1,17 @@
 .footer {
-    font-size: 16px;
+    font-size: 24px;
     color: #fff;
     text-align: center;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 1024px;
     font-weight: bold;
     background-color: rgb(153, 153, 153);
     padding: 10px;
-    border-radius: 10px;
+}
+
+.footerInner {
+    text-align: center;
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .navigation-menu__link-social {

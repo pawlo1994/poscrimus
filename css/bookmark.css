@@ -6,6 +6,7 @@
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(160, 159, 159));
     padding: 10px 20px;
     z-index: -2;
+    margin: 20px 0;
 }
 
 .bookmark__target {

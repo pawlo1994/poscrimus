@@ -12,31 +12,33 @@ Author: pawlo1994
 }
 
 .song-list__button {
-    font-size: 2vw;
+    font-size: 20px;
     text-align: center;
     font-weight: bold;
     border: none;
-    outline: none;
     background: none;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 10px;
     transition-property: box-shadow;
     padding: 10px 0;
+    box-shadow: 0 0 2px #000;
+    background-color: #666;
+    color: #fff;
+    margin: 5px 0;
 }
 
-@media(max-width: 1023px) and (orientation: landscape) {
-    .song-list__button {
-        font-size: 3vw;
-    }
-}
-
-@media(max-width: 1023px) and (orientation: portrait) {
-    .song-list__button {
-        font-size: 4vw;
-    }
+.song-list__button:focus {
+    outline: 3px solid #666;
+    outline-offset: 3px;
 }
 
 .song-list__button:hover {
-    box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 10px #000;
+    background-color: #999;
+}
+
+.song-list__button:active {
+    background-color: #ccc;
+    color: #000;
 }

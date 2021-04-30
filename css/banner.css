@@ -4,9 +4,11 @@
     justify-content: center;
     height: 100vh;
     background-image: url("../images/background.jpg");
-    background-color: rgb(226, 225, 221);
-    background-position: center center;
+    background-color: #f5f6f8;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
+    background-attachment: fixed;
 }
 
 @media(orientation: portrait) {

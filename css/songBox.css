@@ -1,10 +1,11 @@
-.song-box-mini {
+.songBox {
     color: #000;
-    padding: 0 20px;
+    padding: 0;
     align-items: center;
+    display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-color: #aaa;
+    background-color: #ccc;
     position: fixed;
     height: 40vh;
     width: 100vw;
@@ -20,31 +21,23 @@
 }
 
 @media(orientation:landscape) {
-    .song-box-mini {
+    .songBox {
         height: 50vh;
-    }
-}
-
-.song-box-mini--open {
-    display: flex;
-    opacity: 1;
-    pointer-events: unset;
-    transform: unset;
-}
-
-@media (orientation: landscape) {
-    .song-box-mini {
-        padding: 0;
         justify-content: space-between;
-        border-radius: 10px 0 0 0;
         width: 50vw;
         z-index: 2;
     }
 }
 
-.song-box__header {
+.songBox--open {
+    opacity: 1;
+    pointer-events: unset;
+    transform: unset;
+}
+
+.songBox__header {
     margin: 0;
-    padding: 5px;
+    padding: 10px;
     width: 100%;
     font-size: 24px;
     font-weight: bold;
@@ -53,32 +46,34 @@
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
+    background-color: #ddd;
+    border-radius: 10px 10px 0 0;
 }
 
 @media(max-width: 1023px) {
-    .song-box__header {
+    .songBox__header {
         font-size: 18px;
     }
 }
 
 @media(max-width: 767px) {
-    .song-box__header {
+    .songBox__header {
         font-size: 12px;
     }
 }
 
-.song-box__header__description {
-    padding: 0;
+.songBox__description {
+    padding-left: 10px;
     margin: 0;
     text-align: left;
 }
 
-.song-box__header * {
+.songBox__header * {
     color: #333;
     opacity: 0;
 }
 
-.song-box__video {
+.songBox__video {
     display: block;
     width: 90%;
     height: 75%;
@@ -86,13 +81,13 @@
     opacity: 0;
 }
 
-.song-box-mini--open * {
+.songBox--open * {
     opacity: 1;
 }
 
-.song-box__header-buttons {
+.songBox__buttons {
     margin: 0;
-    padding: 0;
+    padding-right: 10px;
     object-fit: contain;
     color: #fff;
     display: flex;
@@ -101,7 +96,7 @@
     flex-direction: row;
 }
 
-.close__button {
+.songBox__closeButton {
     background: none;
     border: none;
     cursor: pointer;
@@ -113,11 +108,11 @@
 }
 
 @media(max-width: 1023px) {
-    .close__button {
+    .songBox__closeButton {
         font-size: 24px;
     }
 }
 
-.close__button:hover {
+.songBox__closeButton:hover {
     opacity: 1;
 }

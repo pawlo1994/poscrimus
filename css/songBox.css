@@ -4,9 +4,9 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-color: #ccc;
+    background-color: #ddd;
     position: fixed;
-    height: 40vh;
+    height: 50vh;
     width: 100vw;
     right: 0;
     bottom: 0;
@@ -21,8 +21,6 @@
 
 @media(orientation:landscape) {
     .songBox {
-        height: 50vh;
-        justify-content: space-between;
         width: 50vw;
         z-index: 2;
     }
@@ -48,6 +46,7 @@
     background-color: #666;
     color: #fff;
     border-radius: 10px 10px 0 0;
+    opacity: 0;
 }
 
 @media(max-width: 1023px) {
@@ -69,20 +68,12 @@
     text-align: left;
 }
 
-.songBox__header * {
-    opacity: 0;
-}
-
 .songBox__video {
     display: block;
     width: 90%;
     height: 75%;
     border: none;
     opacity: 0;
-}
-
-.songBox--open * {
-    opacity: 1;
 }
 
 .songBox__buttons {
@@ -97,6 +88,7 @@
 }
 
 .songBox__closeButton {
+    display: block;
     background: none;
     border: none;
     cursor: pointer;

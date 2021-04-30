@@ -46,7 +46,8 @@
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    background-color: #ddd;
+    background-color: #666;
+    color: #fff;
     border-radius: 10px 10px 0 0;
 }
 
@@ -69,7 +70,6 @@
 }
 
 .songBox__header * {
-    color: #333;
     opacity: 0;
 }
 

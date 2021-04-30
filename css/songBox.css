@@ -89,7 +89,6 @@
     margin: 0;
     padding-right: 10px;
     object-fit: contain;
-    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,12 +104,6 @@
     opacity: 0.5;
     font-size: 36px;
     padding: 0;
-}
-
-@media(max-width: 1023px) {
-    .songBox__closeButton {
-        font-size: 24px;
-    }
 }
 
 .songBox__closeButton:hover {

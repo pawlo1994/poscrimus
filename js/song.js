@@ -1,36 +1,48 @@
-const songBoxButton1 = document.querySelector(".js-song__button-1");
-const songBoxButton2 = document.querySelector(".js-song__button-2");
-const songBoxButton3 = document.querySelector(".js-song__button-3");
-const closeButton = document.querySelector(".close__button");
-const songBoxMini = document.querySelector(".song-box-mini");
-const songBoxHeaderDescription = document.querySelector(".song-box__header__description");
-const songBoxVideo = document.querySelector(".song-box__video");
-
-songBoxButton1.addEventListener("click", () => {
-    if (songBoxMini.classList.contains("song-box-mini")) {
-        songBoxMini.classList.add("song-box-mini--open");
+{
+    const openSongBox = (song) => {
+        song.classList.add("songBox--open");
     }
-    songBoxHeaderDescription.textContent = "PoScriMus - In the C of Calmness";
-    songBoxVideo.src = "https://www.youtube.com/embed/LrAqEPDiUzA";
-});
 
-songBoxButton2.addEventListener("click", () => {
-    if (songBoxMini.classList.contains("song-box-mini")) {
-        songBoxMini.classList.add("song-box-mini--open");
+    const closeSongBox = (song) => {
+        song.classList.remove("songBox--open");
     }
-    songBoxHeaderDescription.textContent = "PoScriMus - Hip-Hop";
-    songBoxVideo.src = "https://www.youtube.com/embed/sQL3kvhqtLM";
-});
 
-songBoxButton3.addEventListener("click", () => {
-    if (songBoxMini.classList.contains("song-box-mini")) {
-        songBoxMini.classList.add("song-box-mini--open");
+    const changeSongTitleAndSource = (songTitle, songSource) => {
+        const songBoxVideo = document.querySelector(".songBox__video");
+        const songBoxDescription = document.querySelector(".songBox__description");
+        if ((songBoxDescription.innerText !== songTitle) || (songBoxVideo.src !== songSource)) {
+            songBoxDescription.innerText = songTitle;
+            songBoxVideo.src = songSource;
+        };
+    };
+
+    const init = () => {
+        const songBoxButton1 = document.querySelector(".js-song__button-1");
+        const songBoxButton2 = document.querySelector(".js-song__button-2");
+        const songBoxButton3 = document.querySelector(".js-song__button-3");
+        const songBoxCloseButton = document.querySelector(".songBox__closeButton");
+        const songBox = document.querySelector(".songBox");
+
+        songBoxButton1.addEventListener("click", () => {
+            openSongBox(songBox);
+            changeSongTitleAndSource("In The C of Calmness", "https://www.youtube.com/embed/LrAqEPDiUzA");
+        });
+
+        songBoxButton2.addEventListener("click", () => {
+            openSongBox(songBox);
+            changeSongTitleAndSource("Hip-Hop", "https://www.youtube.com/embed/sQL3kvhqtLM");
+        });
+
+        songBoxButton3.addEventListener("click", () => {
+            openSongBox(songBox);
+            changeSongTitleAndSource("Sweet Reggae", "https://www.youtube.com/embed/inE9P9wqzzI");
+        });
+
+        songBoxCloseButton.addEventListener("click", () => {
+            closeSongBox(songBox);
+            changeSongTitleAndSource("", "images/youtube.svg");
+        });
     }
-    songBoxHeaderDescription.textContent = "PoScriMus - Sweet Reggae";
-    songBoxVideo.src = "https://www.youtube.com/embed/inE9P9wqzzI";
-});
 
-closeButton.addEventListener("click", () => {
-    songBoxMini.classList.toggle("song-box-mini--open");
-    songBoxVideo.src = "images/youtube.svg";
-});
+    init();
+}

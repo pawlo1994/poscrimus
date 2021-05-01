@@ -64,10 +64,13 @@
     width: 90%;
     height: 75%;
     border: none;
+    transition-duration: 0;
+    transition-delay: 0.5s;
+    transition-property: opacity;
 }
 
 .songBox__video--hidden {
-    display: none;
+    opacity: 0;
 }
 
 .songBox__buttonsContainer {

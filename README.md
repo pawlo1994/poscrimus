@@ -13,3 +13,10 @@ Official Page of PoScriMus project.
 
 ## Preview
 ![Page preview Gif](images/preview.gif)
+
+## Updates
+### 1st May 2021
+
+Now you can resize window with song. Check this out below.
+
+![new feature gif](images/newFeature.gif)

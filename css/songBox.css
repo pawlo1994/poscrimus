@@ -78,17 +78,6 @@
     border: none;
 }
 
-.songBox__buttons {
-    margin: 0;
-    padding-right: 10px;
-    padding: 0;
-    object-fit: contain;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-}
-
 .songBox__closeButton {
     display: block;
     color: #fff;

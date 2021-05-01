@@ -66,6 +66,10 @@
     border: none;
 }
 
+.songBox__video--hidden {
+    display: none;
+}
+
 .songBox__buttonsContainer {
     display: flex;
     align-items: center;

@@ -64,7 +64,7 @@
     width: 90%;
     height: 75%;
     border: none;
-    transition-delay: 0.3s;
+    transition-delay: 0.5s;
     transition-property: opacity;
 }
 

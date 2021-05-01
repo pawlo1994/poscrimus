@@ -6,7 +6,7 @@
     flex-direction: column;
     background-color: #ddd;
     position: fixed;
-    height: 50vh;
+    height: 40vh;
     width: 100vw;
     right: 0;
     bottom: 0;
@@ -21,6 +21,7 @@
 
 @media(orientation:landscape) {
     .songBox {
+        height: 50vh;
         width: 50vw;
         z-index: 2;
     }
@@ -32,12 +33,13 @@
     transform: unset;
 }
 
-.songBox--open * {
+.songBox--small {
     opacity: 1;
+    height: 50px;
 }
 
 .songBox__header {
-    padding: 0 10px;
+    padding: 5px 20px;
     width: 100%;
     font-weight: bold;
     display: flex;
@@ -51,9 +53,8 @@
 }
 
 .songBox__description {
-    font-size: 18px;
-    padding-left: 5px;
-    margin-top: 5px;
+    font-size: 20px;
+    margin: 0;
     text-align: left;
 }
 
@@ -64,20 +65,28 @@
     border: none;
 }
 
-.songBox__closeButton {
-    display: block;
+.songBox__buttonsContainer {
+    display: flex;
+    align-items: center;
+}
+
+.songBox__button {
     color: #fff;
+    border: 1px solid #fff;
     background: none;
     border: none;
     cursor: pointer;
     transition: 0.3s;
-    transition-property: opacity;
-    opacity: 0.5;
+    transition-property: color;
+    opacity: 1;
     font-size: 36px;
-    padding-right: 5px;
-    margin-top: 5px;
+    margin: 0;
 }
 
-.songBox__closeButton:hover {
-    opacity: 1;
+.songBox__button--resize:hover {
+    color: #ddd;
+}
+
+.songBox__button--close:hover {
+    color: #f30;
 }

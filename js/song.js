@@ -1,11 +1,20 @@
 {
     const openSongBox = (song) => {
         song.classList.add("songBox--open");
-    }
+    };
 
     const closeSongBox = (song) => {
         song.classList.remove("songBox--open");
-    }
+        song.classList.remove("songBox--small");
+    };
+
+    const resizeSongBox = (song) => {
+        song.classList.toggle("songBox--small");
+    };
+
+    const changeResizeButtonText = (song, resizeButton) => {
+        resizeButton.innerHTML = (song.classList.contains("songBox--small")) ? "&#9634;" : "&#8722;";
+    };
 
     const changeSongTitleAndSource = (songTitle, songSource) => {
         const songBoxVideo = document.querySelector(".songBox__video");
@@ -20,7 +29,8 @@
         const songBoxButton1 = document.querySelector(".js-song__button-1");
         const songBoxButton2 = document.querySelector(".js-song__button-2");
         const songBoxButton3 = document.querySelector(".js-song__button-3");
-        const songBoxCloseButton = document.querySelector(".songBox__closeButton");
+        const songBoxButtonClose = document.querySelector(".songBox__button--close");
+        const songBoxButtonResize = document.querySelector(".songBox__button--resize");
         const songBox = document.querySelector(".songBox");
 
         songBoxButton1.addEventListener("click", () => {
@@ -38,11 +48,17 @@
             changeSongTitleAndSource("Sweet Reggae", "https://www.youtube.com/embed/inE9P9wqzzI");
         });
 
-        songBoxCloseButton.addEventListener("click", () => {
+        songBoxButtonClose.addEventListener("click", () => {
             closeSongBox(songBox);
             changeSongTitleAndSource("", "images/youtube.svg");
+            songBoxButtonResize.innerHTML = "&#8722;";
         });
-    }
+
+        songBoxButtonResize.addEventListener("click", () => {
+            resizeSongBox(songBox);
+            changeResizeButtonText(songBox, songBoxButtonResize);
+        });
+    };
 
     init();
 }

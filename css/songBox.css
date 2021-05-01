@@ -31,6 +31,9 @@
     pointer-events: unset;
     transform: unset;
 }
+.songBox--open * {
+    opacity: 1;
+}
 
 .songBox__header {
     margin: 0;
@@ -47,6 +50,9 @@
     color: #fff;
     border-radius: 10px 10px 0 0;
     opacity: 0;
+}
+.songBox__header * {
+    opacity: 1;
 }
 
 @media(max-width: 1023px) {

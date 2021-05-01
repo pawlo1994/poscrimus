@@ -65,9 +65,8 @@
 }
 
 .songBox__description {
-    padding: 0;
-    padding-left: 10px;
-    margin: 0;
+    padding: 5px;
+    margin: 5px;
     text-align: left;
 }
 
@@ -88,7 +87,8 @@
     transition-property: opacity;
     opacity: 0.5;
     font-size: 36px;
-    padding: 0;
+    padding: 5px;
+    margin: 5px;
 }
 
 .songBox__closeButton:hover {

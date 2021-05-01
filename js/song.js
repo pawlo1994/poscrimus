@@ -12,9 +12,8 @@
         songVideo.classList.add("songBox__video--hidden");
     };
 
-    const resizeSongBox = (song, songVideo) => {
+    const resizeSongBox = (song) => {
         song.classList.toggle("songBox--small");
-        songVideo.classList.toggle("songBox__video--hidden");
     };
 
     const changeResizeButtonText = (song, resizeButton) => {
@@ -60,7 +59,7 @@
         });
 
         songBoxButtonResize.addEventListener("click", () => {
-            resizeSongBox(songBox, songBoxVideo);
+            resizeSongBox(songBox);
             changeResizeButtonText(songBox, songBoxButtonResize);
         });
     };

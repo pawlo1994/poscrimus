@@ -6,23 +6,22 @@
     flex-direction: column;
     background-color: #ddd;
     position: fixed;
-    height: 40vh;
-    width: 100vw;
+    height: 300px;
+    width: 100%;
     right: 0;
     bottom: 0;
     border-radius: 10px 10px 0 0;
     opacity: 0;
     pointer-events: none;
     transition-property: opacity, transform;
-    transition: 0.5s;
-    transform: scale(0.5);
-    transform-origin: bottom right;
+    transition-duration: 0.5s;
+    transform: translatey(300px);
+    transform-origin: bottom;
 }
 
 @media(orientation:landscape) {
     .songBox {
-        height: 50vh;
-        width: 50vw;
+        width: 50%;
         z-index: 2;
     }
 }
@@ -35,7 +34,7 @@
 
 .songBox--small {
     opacity: 1;
-    height: 50px;
+    transform: translatey(250px);
 }
 
 .songBox__header {
@@ -65,7 +64,6 @@
     height: 75%;
     border: none;
     transition-delay: 0.5s;
-    transition-property: opacity;
 }
 
 .songBox__video--hidden {

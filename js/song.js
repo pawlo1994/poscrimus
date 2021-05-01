@@ -1,6 +1,8 @@
 {
-    const openSongBox = (song) => {
+    const openSongBox = (song, resizeButton) => {
         song.classList.add("songBox--open");
+        song.classList.remove("songBox--small");
+        resizeButton.innerHTML = "&#8722;";
     };
 
     const closeSongBox = (song) => {
@@ -34,17 +36,17 @@
         const songBox = document.querySelector(".songBox");
 
         songBoxButton1.addEventListener("click", () => {
-            openSongBox(songBox);
+            openSongBox(songBox, songBoxButtonResize);
             changeSongTitleAndSource("In The C of Calmness", "https://www.youtube.com/embed/LrAqEPDiUzA");
         });
 
         songBoxButton2.addEventListener("click", () => {
-            openSongBox(songBox);
+            openSongBox(songBox, songBoxButtonResize);
             changeSongTitleAndSource("Hip-Hop", "https://www.youtube.com/embed/sQL3kvhqtLM");
         });
 
         songBoxButton3.addEventListener("click", () => {
-            openSongBox(songBox);
+            openSongBox(songBox, songBoxButtonResize);
             changeSongTitleAndSource("Sweet Reggae", "https://www.youtube.com/embed/inE9P9wqzzI");
         });
 

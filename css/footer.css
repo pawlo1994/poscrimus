@@ -8,14 +8,18 @@
     margin-bottom: 40px;
 }
 
-.footerInner {
+.footer__inner {
     text-align: center;
     width: 80%;
     max-width: 1024px;
     margin: 0 auto;
 }
 
-.navigation-menu__link-social {
+.footer__item {
+    margin: 10px 5px;
+}
+
+.footer__link {
     display: flex;
     align-items: center;
     transition: 0.3s;
@@ -23,15 +27,15 @@
     padding: 5px;
 }
 
-.navigation-menu__social-icon {
+.footer__linkIcon {
     width: 24px;
 }
 
-.navigation-menu__link-social:hover {
+.footer__link:hover {
     box-shadow: 0 0 1px 1px #eee;
 }
 
-.navigation-menu__social {
+.footer__socialLinks {
     display: flex;
     justify-content: center;
     align-items: center;

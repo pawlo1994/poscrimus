@@ -26,9 +26,11 @@
     }
 }
 
-@media(max-width:767px) {
+@media(max-width:1023px) {
     .songBox {
         width: 60%;
+        height: 220px;
+        transform: translateY(220px);
         z-index: 2;
     }
 }
@@ -49,6 +51,12 @@
 .songBox--small {
     opacity: 1;
     transform: translatey(200px);
+}
+
+@media(max-width:1023px) {
+    .songBox--small {
+        transform: translateY(170px);
+    }
 }
 
 .songBox__header {

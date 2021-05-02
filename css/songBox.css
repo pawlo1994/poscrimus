@@ -42,6 +42,14 @@
     }
 }
 
+@media(max-height:319px) {
+    .songBox {
+        width: 50%;
+        height: 170px;
+        transform: translateY(170px);
+    }
+}
+
 .songBox--open {
     opacity: 1;
     pointer-events: unset;

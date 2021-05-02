@@ -6,8 +6,9 @@
     flex-direction: column;
     background-color: #ddd;
     position: fixed;
-    height: 250px;
-    width: 100%;
+    height: 350px;
+    width: 40%;
+    z-index: 2;
     right: 0;
     bottom: 0;
     border-radius: 10px 10px 0 0;
@@ -15,30 +16,29 @@
     pointer-events: none;
     transition-property: opacity, transform;
     transition-duration: 0.5s;
-    transform: translatey(250px);
+    transform: translatey(350px);
     transform-origin: bottom;
 }
 
-@media(max-width:1920px) {
+@media(max-width:1024px) {
     .songBox {
-        width: 30%;
-        z-index: 2;
+        width: 50%;
+        height: 270px;
+        transform: translatey(270px);
     }
 }
 
-@media(max-width:1023px) {
+@media(max-width:768px) {
     .songBox {
         width: 60%;
         height: 220px;
         transform: translateY(220px);
-        z-index: 2;
     }
 }
 
 @media(max-width:425px) {
     .songBox {
         width: 100%;
-        z-index: 2;
     }
 }
 
@@ -50,10 +50,16 @@
 
 .songBox--small {
     opacity: 1;
-    transform: translatey(200px);
+    transform: translatey(300px);
 }
 
-@media(max-width:1023px) {
+@media(max-width:1024px) {
+    .songBox--small {
+        transform: translateY(220px);
+    }
+}
+
+@media(max-width:768px) {
     .songBox--small {
         transform: translateY(170px);
     }

@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/bookmark.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/song-list.css">
+    <link rel="stylesheet" href="css/songList.css">
     <link rel="stylesheet" href="css/songBox.css">
     <link rel="stylesheet" href="css/contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous">
-    <script defer src="js/main-navigation.js"></script>
+    <script defer src="js/navigation.js"></script>
     <script defer src="js/song.js"></script>
 </head>
 
@@ -26,40 +26,40 @@
     <nav class="navigation">
         <div class="navigation__inner">
             <a href="#" class="navigation__logo">PoScriMus</a>
-            <div class="navigation-menu js-navigation-menu">
-                <div class="navigation-menu__inner">
-                    <ul class="navigation-menu__pages">
-                        <li class="navigation-menu__item">
-                            <a href="#" class="navigation-menu__link">home</a>
-                        </li>
-                        <li class="navigation-menu__item">
-                            <a href="#o-mnie" class="navigation-menu__link">o mnie</a>
-                        </li>
-                        <li class="navigation-menu__item">
-                            <a href="#utwory" class="navigation-menu__link">utwory</a>
-                        </li>
-                        <li class="navigation-menu__item">
-                            <a href="#kontakt" class="navigation-menu__link">kontakt</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="navigation__menu js-navigation__menu">
+                <ul class="navigation__pages">
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link js-navigation__link">home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#o-mnie" class="navigation__link js-navigation__link">o mnie</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#utwory" class="navigation__link js-navigation__link">utwory</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#kontakt" class="navigation__link js-navigation__link">kontakt</a>
+                    </li>
+                </ul>
             </div>
-            <button class="navigation-menu__mobile-button js-navigation-menu__mobile-button">
+            <button class="navigation__mobileButton js-navigation__mobileButton">
+                <img src="images/navigation.svg" class="navigation__mobileButtonImage js-navigation__mobileButtonImage"
+                    alt="menu">
             </button>
         </div>
-        <div class="songBox">
+        <div class="songBox js-songBox">
             <section class="songBox__header">
-                <h2 class="songBox__description">author - title</h2>
+                <h2 class="songBox__description js-songBox__description">author - title</h2>
                 <div class="songBox__buttonsContainer">
-                    <button class="songBox__button songBox__button--resize">
+                    <button class="songBox__button songBox__button--resize js-songBox__button--resize">
                         &#8722;
                     </button>
-                    <button class="songBox__button songBox__button--close">
+                    <button class="songBox__button songBox__button--close js-songBox__button--close">
                         &#10539;
                     </button>
                 </div>
             </section>
-            <iframe src="images/youtube.svg" class="songBox__video" allowfullscreen></iframe>
+            <iframe src="images/youtube.svg" class="songBox__video js-songBox__video" allowfullscreen></iframe>
         </div>
     </nav>
     <main>
@@ -93,14 +93,14 @@
                 </div>
             </section>
         </div>
-        <div class="song-list">
-            <button class="song-list__button js-song__button-1">
+        <div class="songList">
+            <button class="songList__button js-song__button-1">
                 &#9654; In the C of Calmness
             </button>
-            <button class="song-list__button js-song__button-2">
+            <button class="songList__button js-song__button-2">
                 &#9654; Hip-Hop
             </button>
-            <button class="song-list__button js-song__button-3">
+            <button class="songList__button js-song__button-3">
                 &#9654; Sweet Reggae
             </button>
         </div>
@@ -142,23 +142,23 @@
     </main>
     <footer class="footer">
         <div class="footerInner">Copyright &copy; Paweł Suchy (PoScriMus) 2021
-            <ul class="navigation-menu__social">
-                <li class="navigation-menu__item">
-                    <a href="https://facebook.com/poscrimus" target="_blank" class="navigation-menu__link-social"
+            <ul class="footer__socialLinks">
+                <li class="footer__item">
+                    <a href="https://facebook.com/poscrimus" target="_blank" class="footer__link"
                         rel="norefferer noopener">
-                        <img src="images/facebook.svg" alt="facebook" class="navigation-menu__social-icon">
+                        <img src="images/facebook.svg" alt="facebook" class="footer__linkIcon">
                     </a>
                 </li>
-                <li class="navigation-menu__item">
-                    <a href="https://instagram.com/poscrimus" target="_blank" class="navigation-menu__link-social"
+                <li class="footer__item">
+                    <a href="https://instagram.com/poscrimus" target="_blank" class="footer__link"
                         rel="norefferer noopener">
-                        <img src="images/instagram.svg" alt="instagram" class="navigation-menu__social-icon">
+                        <img src="images/instagram.svg" alt="instagram" class="footer__linkIcon">
                     </a>
                 </li>
-                <li class="navigation-menu__item">
+                <li class="footer__item">
                     <a href="https://www.youtube.com/channel/UCBBifap1FHklwZmbqnYfDVg" target="_blank"
-                        class="navigation-menu__link-social" rel="norefferer noopener">
-                        <img src="images/youtube.svg" alt="youtube" class="navigation-menu__social-icon">
+                        class="footer__link" rel="norefferer noopener">
+                        <img src="images/youtube.svg" alt="youtube" class="footer__linkIcon">
                     </a>
                 </li>
             </ul>

@@ -73,6 +73,12 @@
     }
 }
 
+@media(max-height: 319px) {
+    .songBox--small {
+        transform: translateY(120px);
+    }
+}
+
 .songBox__header {
     padding: 5px 20px;
     width: 100%;

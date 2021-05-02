@@ -21,7 +21,7 @@
     };
 
     const changeSongTitleAndSource = (songTitle, songSource, songVideo) => {
-        const songBoxDescription = document.querySelector(".songBox__description");
+        const songBoxDescription = document.querySelector(".js-songBox__description");
         if ((songBoxDescription.innerText !== songTitle) || (songVideo.src !== songSource)) {
             songBoxDescription.innerText = songTitle;
             songVideo.src = songSource;
@@ -32,10 +32,10 @@
         const songBoxButton1 = document.querySelector(".js-song__button-1");
         const songBoxButton2 = document.querySelector(".js-song__button-2");
         const songBoxButton3 = document.querySelector(".js-song__button-3");
-        const songBoxButtonClose = document.querySelector(".songBox__button--close");
-        const songBoxButtonResize = document.querySelector(".songBox__button--resize");
-        const songBox = document.querySelector(".songBox");
-        const songBoxVideo = document.querySelector(".songBox__video");
+        const songBoxButtonClose = document.querySelector(".js-songBox__button--close");
+        const songBoxButtonResize = document.querySelector(".js-songBox__button--resize");
+        const songBox = document.querySelector(".js-songBox");
+        const songBoxVideo = document.querySelector(".js-songBox__video");
 
         songBoxButton1.addEventListener("click", () => {
             openSongBox(songBox, songBoxButtonResize, songBoxVideo);

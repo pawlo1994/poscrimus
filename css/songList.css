@@ -2,17 +2,17 @@
 Author: pawlo1994
 */
 
-.song-list {
+.songList {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 80%;
-    max-width: 1024px;
+    width: 90%;
+    max-width: 1152px;
     margin: 0 auto;
     padding: 20px 0;
 }
 
-.song-list__button {
+.songList__button {
     font-size: 20px;
     text-align: center;
     font-weight: bold;
@@ -31,17 +31,17 @@ Author: pawlo1994
     margin: 5px auto;
 }
 
-.song-list__button:focus {
+.songList__button:focus {
     outline: 3px solid #666;
     outline-offset: 3px;
 }
 
-.song-list__button:hover {
+.songList__button:hover {
     box-shadow: 0 0 10px #000;
     background-color: #999;
 }
 
-.song-list__button:active {
+.songList__button:active {
     background-color: #ccc;
     color: #000;
 }

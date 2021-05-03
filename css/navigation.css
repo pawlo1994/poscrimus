@@ -3,8 +3,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: transparent;
-    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.35);
+    padding: 5px 10px;
     margin: 0 auto;
 }
 
@@ -26,13 +26,12 @@
 
 @media(max-width: 1023px) {
     .navigation__menu {
-        background-color: transparent;
+        background-color: rgba(128, 128, 128, 0.35);
         flex-direction: column;
         align-items: flex-start;
         object-fit: contain;
         position: fixed;
         padding: 5px 60px 5px 10px;
-        border-bottom-left-radius: 10px;
         top: 0;
         right: 0;
         z-index: 3;
@@ -54,13 +53,13 @@
 
 .navigation__logo {
     font-size: 50px;
-    padding: 10px;
+    padding: 5px;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
-    transition: 0.3s;
-    transition-property: text-shadow;
-    background-color: rgba(68, 68, 68, 0.5);
+    transition-duration: 0.3s;
+    transition-property: text-shadow, background-color;
+    background-color: rgb(68, 68, 68);
     border-radius: 10px;
 }
 
@@ -68,6 +67,11 @@
     .navigation__logo {
         font-size: 30px;
     }
+}
+
+.navigation__logo:hover {
+    text-shadow: 2px 2px 0 #000;
+    background-color: rgb(126, 126, 126);
 }
 
 .navigation__item {
@@ -113,10 +117,6 @@
     background-color: rgb(68, 68, 68);
 }
 
-.navigation__logo:hover {
-    text-shadow: 2px 3px 0px #000;
-}
-
 .navigation__link:hover {
     background-color: rgb(126, 126, 126);
 }
@@ -137,7 +137,7 @@
         justify-content: center;
         border: none;
         border-radius: 10px;
-        background-color: rgba(68, 68, 68, 0.5);
+        background-color: rgb(68, 68, 68);
         background-size: cover;
         padding: 20px;
         width: 30px;

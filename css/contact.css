@@ -22,6 +22,7 @@
 }
 
 .contact__item-list {
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,6 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-basis: 50%;
 }
 
 .contact__item-icon {
@@ -47,12 +49,14 @@
 
 .contact__item-link {
     display: flex;
+    min-width: 250px;
     align-items: center;
+    justify-content: center;
     color: #333;
     text-decoration: none;
     font-size: 16px;
     padding: 10px;
-    margin: 10px;
+    margin-bottom: 10px;
     box-shadow: 0 0 2px #999;
     transition: 0.5s;
     transition-property: box-shadow;

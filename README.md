@@ -14,9 +14,9 @@ Official Page of PoScriMus project.
 ## Preview
 ![Page preview Gif](images/preview.gif)
 
-## Updates
-### 1st May 2021
+## Special Features
+When you click on button with song title, the window with this will open.
+![open song window gif](images/openSongWindow.gif)
 
-Now you can resize window with song. Check this out below.
-
-![new feature gif](images/newFeature.gif)
+You can minimize, maximize and close this window.
+![song window interactions gif](images/songWindowInteractions.gif)

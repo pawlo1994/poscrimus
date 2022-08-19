@@ -98,20 +98,8 @@
     font-size: 20px;
     margin: 0;
     text-align: left;
-}
-
-@media(max-width: 1023px){
-    .songBox__description{
-        font-size: 14px;
-        font-weight: normal;
-    }
-}
-
-@media(max-width: 280px){
-    .songBox__description{
-        font-size: 10px;
-        font-weight: normal;
-    }
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .songBox__video {

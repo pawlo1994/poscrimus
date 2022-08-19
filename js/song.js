@@ -1,4 +1,22 @@
 {
+    let songTitleList = [];
+    let songSourceList = [];
+    const songBoxButton1 = document.querySelector(".js-song__button-1");
+    const songBoxButton2 = document.querySelector(".js-song__button-2");
+    const songBoxButton3 = document.querySelector(".js-song__button-3");
+    fetch("https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyCIWmk_Uls2NRjjN5yq1aATTfQqHQ-_y60&playlistId=PLnvldM9Pgp03Hl79pxwNvdTEvS7sQXn1G&part=snippet")
+        .then(response => response.json())
+        .then((response) => {
+            for (let i = 0; i <= (response.items.length - 1); i++) {
+                const videoInfo = Object.entries(response.items[i].snippet);
+                songTitleList = [...songTitleList, videoInfo[2][1]];
+                songSourceList = [...songSourceList, videoInfo[8][1].videoId];
+                songBoxButton1.innerText = songTitleList[0];
+                songBoxButton2.innerText = songTitleList[1];
+                songBoxButton3.innerText = songTitleList[2];
+            }
+        });
+
     const openSongBox = (song, resizeButton, songVideo) => {
         song.classList.add("songBox--open");
         song.classList.remove("songBox--small");
@@ -28,10 +46,7 @@
         };
     };
 
-    const init = () => {
-        const songBoxButton1 = document.querySelector(".js-song__button-1");
-        const songBoxButton2 = document.querySelector(".js-song__button-2");
-        const songBoxButton3 = document.querySelector(".js-song__button-3");
+    const init = (songBoxButton1, songBoxButton2, songBoxButton3) => {
         const songBoxButtonClose = document.querySelector(".js-songBox__button--close");
         const songBoxButtonResize = document.querySelector(".js-songBox__button--resize");
         const songBox = document.querySelector(".js-songBox");
@@ -39,17 +54,17 @@
 
         songBoxButton1.addEventListener("click", () => {
             openSongBox(songBox, songBoxButtonResize, songBoxVideo);
-            changeSongTitleAndSource("In The C of Calmness", "https://www.youtube.com/embed/LrAqEPDiUzA", songBoxVideo);
+            changeSongTitleAndSource(songTitleList[0], `https://www.youtube.com/embed/${songSourceList[0]}`, songBoxVideo);
         });
 
         songBoxButton2.addEventListener("click", () => {
             openSongBox(songBox, songBoxButtonResize, songBoxVideo);
-            changeSongTitleAndSource("Hip-Hop", "https://www.youtube.com/embed/sQL3kvhqtLM", songBoxVideo);
+            changeSongTitleAndSource(songTitleList[1], `https://www.youtube.com/embed/${songSourceList[1]}`, songBoxVideo);
         });
 
         songBoxButton3.addEventListener("click", () => {
             openSongBox(songBox, songBoxButtonResize, songBoxVideo);
-            changeSongTitleAndSource("Sweet Reggae", "https://www.youtube.com/embed/inE9P9wqzzI", songBoxVideo);
+            changeSongTitleAndSource(songTitleList[2], `https://www.youtube.com/embed/${songSourceList[2]}`, songBoxVideo);
         });
 
         songBoxButtonClose.addEventListener("click", () => {
@@ -64,5 +79,5 @@
         });
     };
 
-    init();
+    init(songBoxButton1, songBoxButton2, songBoxButton3);
 }

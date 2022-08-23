@@ -1,20 +1,59 @@
 {
-    let songTitleList = [];
-    let songSourceList = [];
+    let songsData = [];
+    let songListButtons;
 
-    const getSongsData = (songBoxButton1, songBoxButton2, songBoxButton3) => {
-        fetch("https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyCIWmk_Uls2NRjjN5yq1aATTfQqHQ-_y60&playlistId=PLnvldM9Pgp03Hl79pxwNvdTEvS7sQXn1G&part=snippet")
-            .then(response => response.json())
-            .then((response) => {
-                for (let i = 0; i <= (response.items.length - 1); i++) {
-                    const videoInfo = Object.entries(response.items[i].snippet);
-                    songTitleList = [...songTitleList, videoInfo[2][1]];
-                    songSourceList = [...songSourceList, videoInfo[8][1].videoId];
-                }
-                songBoxButton1.innerText = songTitleList[0];
-                songBoxButton2.innerText = songTitleList[1];
-                songBoxButton3.innerText = songTitleList[2];
+    const addSongListButtonsEvent = (songBox, songBoxButtonResize, songBoxVideo) => {
+        songListButtons.forEach((songListButton, id) => {
+            songListButton.addEventListener("click", () => {
+                openSongBox(songBox, songBoxButtonResize, songBoxVideo);
+                changeSongTitleAndSource(songsData[id].songTitle, `https://www.youtube.com/embed/${songsData[id].songSource}`, songBoxVideo);
             });
+        });
+    };
+
+    const getSongsData = (songList, songBox, songBoxButtonResize, songBoxVideo) => {
+        songList.innerHTML = `
+            <span class="songList__idleText">
+                Sekundka, pobieram listę utworów...
+            </span>`;
+        setTimeout(() => {
+            songList.innerHTML = '';
+            fetch("https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyCIWmk_Uls2NRjjN5yq1aATTfQqHQ-_y60&playlistId=PLnvldM9Pgp03Hl79pxwNvdTEvS7sQXn1G&part=snippet")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(response.statusText);
+                    }
+                    return response;
+                })
+                .then(response => response.json())
+                .then((response) => {
+                    for (let i = 0; i <= (response.items.length - 1); i++) {
+                        const videoInfo = Object.entries(response.items[i].snippet);
+                        songsData = [
+                            ...songsData,
+                            {
+                                songTitle: videoInfo[2][1],
+                                songSource: videoInfo[8][1].videoId
+                            }
+                        ];
+                        songList.innerHTML += `
+                        <button class="songList__button js-songList__button">
+                            ${songsData[i].songTitle}
+                        </button>
+                    `;
+                    }
+                    songListButtons = document.querySelectorAll(".js-songList__button");
+                    addSongListButtonsEvent(songBox, songBoxButtonResize, songBoxVideo);
+                })
+                .catch(error => {
+                    songList.innerHTML = `
+                        <span class="songList__idleText">
+                            Nie udało się pobrać danych, sprawdź połączenie z internetem i spróbuj ponownie później...
+                        </span>
+                    `
+                    console.error("Wystąpił błąd...", error);
+                })
+        }, 2000);
     };
 
     const openSongBox = (song, resizeButton, songVideo) => {
@@ -51,26 +90,9 @@
         const songBoxButtonResize = document.querySelector(".js-songBox__button--resize");
         const songBox = document.querySelector(".js-songBox");
         const songBoxVideo = document.querySelector(".js-songBox__video");
-        const songBoxButton1 = document.querySelector(".js-song__button-1");
-        const songBoxButton2 = document.querySelector(".js-song__button-2");
-        const songBoxButton3 = document.querySelector(".js-song__button-3");
+        const songList = document.querySelector(".js-songList");
 
-        getSongsData(songBoxButton1, songBoxButton2, songBoxButton3);
-
-        songBoxButton1.addEventListener("click", () => {
-            openSongBox(songBox, songBoxButtonResize, songBoxVideo);
-            changeSongTitleAndSource(songTitleList[0], `https://www.youtube.com/embed/${songSourceList[0]}`, songBoxVideo);
-        });
-
-        songBoxButton2.addEventListener("click", () => {
-            openSongBox(songBox, songBoxButtonResize, songBoxVideo);
-            changeSongTitleAndSource(songTitleList[1], `https://www.youtube.com/embed/${songSourceList[1]}`, songBoxVideo);
-        });
-
-        songBoxButton3.addEventListener("click", () => {
-            openSongBox(songBox, songBoxButtonResize, songBoxVideo);
-            changeSongTitleAndSource(songTitleList[2], `https://www.youtube.com/embed/${songSourceList[2]}`, songBoxVideo);
-        });
+        getSongsData(songList, songBox, songBoxButtonResize, songBoxVideo);
 
         songBoxButtonClose.addEventListener("click", () => {
             closeSongBox(songBox, songBoxVideo);

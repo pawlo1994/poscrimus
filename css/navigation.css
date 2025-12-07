@@ -4,6 +4,7 @@
     left: 0;
     right: 0;
     background-color: rgba(128, 128, 128, 0.35);
+    backdrop-filter: blur(10px);
     padding: 5px 10px;
     margin: 0 auto;
 }
@@ -146,6 +147,7 @@
         transition-property: transform, background-image;
         z-index: 3;
     }
+
     .navigation__mobileButton:focus {
         outline: 2px solid #666;
         outline-offset: 2px;
